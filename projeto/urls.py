@@ -17,7 +17,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+# This import is necessary to use the "HttpResponse" function
+from django.http import HttpResponse
+
+# HTTP request of the page "sobre/"
+def my_view(request):
+    return HttpResponse("Hello, Django!")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("sobre/", my_view), # because i put "my_view" here, the page will run the def my_view(request) function
 ]
