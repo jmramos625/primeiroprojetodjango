@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 # This import is necessary to use the "HttpResponse" function
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 
 # Just a test abouy creating a function to return a page
